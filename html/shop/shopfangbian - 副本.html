@@ -1,0 +1,288 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>商城</title>
+	<meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=no">
+	<link rel="stylesheet" href="../../css/shop/shop.css">
+  <link rel="stylesheet" href="../../css/shop/swiper.min.css">
+	<script type="text/javascript" src="../../js/inner/shop/rem.js"></script>
+  <script src="../../js/without/jquery.min.js"></script>
+   <!-- <script src="../../js/without/viewprot.js"></script> -->
+  <script type="text/javascript" src="../../js/without/swiper.jquery.min.js"></script>
+  <!-- <script type="text/javascript" src="../../js/without/jquery.fly.min.js"></script> -->
+  <!-- <script type="text/javascript" src="../../js/without/requestAnimationFrame.js"></script> -->
+  <!-- <script type="shop.js"></script> -->
+  <style>
+ .swiper-container{
+    position: fixed;
+    top:0;
+    width:100%;
+    height:100px;
+    border:1px solid #aaa;
+   }
+   /*.swiper-slide{
+    width:100px;
+   }*/
+  </style>
+</head>
+<body>
+      <!-- 图片轮播开始处 -->
+      <!--   <div class="swiper-container">
+            <div class="swiper-wrapper">
+                <div class="swiper-slide swiper-slidea">
+                    slider1
+                </div>
+                <div class="swiper-slide swiper-slideb">
+                    slider2
+                </div>
+                <div class="swiper-slide swiper-slidec">
+                    slider3
+                </div>
+                <div class="swiper-slide swiper-slided">
+                    slider4
+                </div>
+                 <div class="swiper-slide swiper-slidee" style="margin-top:30px">
+                    slider5
+                </div>
+            </div> -->
+            <!-- 如果需要分页器 -->
+            <!-- <div class="swiper-pagination"></div> -->
+            <!-- 如果需要导航按钮 -->
+            <!-- <div class="swiper-button-prev"></div> -->
+            <!-- <div class="swiper-button-next"></div> -->
+            <!-- 如果需要滚动条 -->
+         <!--    <div class="swiper-scrollbar"></div>
+        </div> -->
+        <!-- 时间 -->
+    <div id="timerWrap">    
+        <div id="timeWrap">
+            <div id="timeTop">
+                <span id="timeClose">取消</span>
+                <span id="timeTitle">请选择服务时间</span>
+                <span id="timeOk">确定</span>
+            </div>
+            <div id="timeMain">
+                <div id="timeMainTop"></div>
+                <div id="timeMainBottom"></div>
+                <div id="dd" class="swiper-container swiper-container_dd">
+                    <ul class="swiper-wrapper">
+                    </ul>
+                </div>
+                <div id="hh" class="swiper-container swiper-container_hh">
+                    <ul class="swiper-wrapper">
+                        <li class='swiper-slide'>07:00</li>
+                        <li class='swiper-slide'>07:30</li>
+                        <li class='swiper-slide'>08:00</li>
+                        <li class='swiper-slide'>08:30</li>
+                        <li class='swiper-slide'>09:00</li>
+                        <li class='swiper-slide'>09:30</li>
+                        <li class='swiper-slide'>10:00</li>
+                        <li class='swiper-slide'>10:30</li>
+                        <li class='swiper-slide'>11:00</li>
+                        <li class='swiper-slide'>11:30</li>
+                        <li class='swiper-slide'>12:00</li>
+                        <li class='swiper-slide'>12:30</li>
+                        <li class='swiper-slide'>13:00</li>
+                        <li class='swiper-slide'>13:30</li>
+                        <li class='swiper-slide'>14:00</li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+    </div>
+</body>
+</html>
+<script>
+// var mySwiper = new Swiper ('.swiper-container', {
+//   direction: 'vertical',//水平还是垂直方向
+//   loop: true,//循环
+//   // 如果需要分页器
+//   pagination: '.swiper-pagination',
+//   // 如果需要前进后退按钮
+//   // nextButton: '.swiper-button-next',
+//   // prevButton: '.swiper-button-prev',
+//   // 如果需要滚动条
+//   scrollbar: '.swiper-scrollbar',
+//   autoplay: 5000,//可选选项，自动滑动
+// })
+var swiper = new Swiper('.swiper-container', {
+  //    direction: 'vertical',//水平还是垂直方向
+  // slidesPerView: 4,
+  // spaceBetween: 40,
+ 
+  // breakpoints: { 
+  //   //当宽度小于等于320
+  //   320: {
+  //     slidesPerView: 1,
+  //     spaceBetween: 10
+  //   },
+  //  //当宽度小于等于480
+  //   480: { 
+  //     slidesPerView: 2,
+  //     spaceBetween: 30
+  //   },
+  //   //当宽度小于等于640
+  //   640: {
+  //     slidesPerView: 3,
+  //     spaceBetween: 30
+  //   }
+  // }
+  // autoHeight: true, //高度随内容变化
+   direction: 'vertical',              //可设置水平(horizontal)或垂直(vertical)
+                setWrapperSize :true,               //开启这个设定会在Wrapper上添加等于slides相加的宽高，在对flexbox布局的支持不是很好的浏览器中可能需要用到
+                slidesPerView : 3,                  //设置slider容器能够同时显示的slides数量
+                centeredSlides : true,              //若为真，那么活动块会居中，而非默认状态下的居左
+                speed:100,                          //速度
+                roundLengths : true,                //宽高取整
+                observer:true,
+                spaceBetween: 20,//间距上下
+                // onInit: function(swiper){
+                //   //Swiper初始化了
+                //   alert(swiper.activeIndex);//提示Swiper的当前索引
+                // }
+                onTouchEnd: function(swiper){
+                      // alert(swiper.activeIndex);
+                      }
+// })
+})
+// 时间函数
+   //选择时间
+   timer();
+        function timer(){
+            var ismove = false;
+            $('#date').on('touchstart', function(ev) {
+                ismove = false;
+            })
+            $('#date').on('touchmove', function(ev) {
+                ismove = true;
+            })
+            $('#date').on('touchend', function(ev) {
+                if (ismove) {
+                    return
+                }else{
+                    $('#timerWrap').show();
+                    time();
+                }
+            })
+        }
+    function time(){
+        $('#timerWrap').html("<div id='timeWrap'>\
+                                <div id='timeTop'>\
+                                    <span id='timeClose'>取消</span>\
+                                    <span id='timeTitle'>请选择服务时间</span>\
+                                    <span id='timeOk'>确定</span>\
+                                </div>\
+                                <div id='timeMain'>\
+                                    <div id='timeMainTop'></div>\
+                                    <div id='timeMainBottom'></div>\
+                                    <div id='dd' class='swiper-container swiper-container_dd'>\
+                                        <ul class='swiper-wrapper'>\
+                                        </ul>\
+                                    </div>\
+                                    <div id='hh' class='swiper-container swiper-container_hh'>\
+                                        <ul class='swiper-wrapper'>\
+                                            <li class='swiper-slide'>07:00</li>\
+                                            <li class='swiper-slide'>07:30</li>\
+                                            <li class='swiper-slide'>08:00</li>\
+                                            <li class='swiper-slide'>08:30</li>\
+                                            <li class='swiper-slide'>09:00</li>\
+                                            <li class='swiper-slide'>09:30</li>\
+                                            <li class='swiper-slide'>10:00</li>\
+                                            <li class='swiper-slide'>10:30</li>\
+                                            <li class='swiper-slide'>11:00</li>\
+                                            <li class='swiper-slide'>11:30</li>\
+                                            <li class='swiper-slide'>12:00</li>\
+                                            <li class='swiper-slide'>12:30</li>\
+                                            <li class='swiper-slide'>13:00</li>\
+                                            <li class='swiper-slide'>13:30</li>\
+                                            <li class='swiper-slide'>14:00</li>\
+                                        </ul>\
+                                    </div>\
+                                </div>\
+                            </div>");       //初始化
+        var nowTime=new Date()//当前时间
+        var HH='07:00';//小时
+        var DD=getYY(new Date(nowTime.getTime()+24*60*60*1000))+"-"+(getMM(new Date(nowTime.getTime()+24*60*60*1000))<10?'0'+getMM(new Date(nowTime.getTime()+24*60*60*1000)):getMM(new Date(nowTime.getTime()+24*60*60*1000)))+"-"+(getDD(new Date(nowTime.getTime()+24*60*60*1000))<10?'0'+getDD(new Date(nowTime.getTime()+24*60*60*1000)):getDD(new Date(nowTime.getTime()+24*60*60*1000)));//日期
+        //获取年份
+            function getYY(str){
+                return new Date(str).getFullYear();
+            }
+        //获取月份
+            function getMM(str){
+                return new Date(str).getMonth()+1;
+            }
+        //获取日
+            function getDD(str){
+                return new Date(str).getDate();
+            }
+        //添加日期
+            for (var i = 1; i < 7; i++) {
+                $('#dd>ul').append("<li class='swiper-slide' data-time='"+getYY(new Date(nowTime.getTime()+i*24*60*60*1000))+"-"+(getMM(new Date(nowTime.getTime()+i*24*60*60*1000))<10?'0'+getMM(new Date(nowTime.getTime()+i*24*60*60*1000)):getMM(new Date(nowTime.getTime()+i*24*60*60*1000)))+"-"+(getDD(new Date(nowTime.getTime()+i*24*60*60*1000))<10?'0'+getDD(new Date(nowTime.getTime()+i*24*60*60*1000)):getDD(new Date(nowTime.getTime()+i*24*60*60*1000)))+"'>\
+                    "+(getMM(new Date(nowTime.getTime()+i*24*60*60*1000))<10?'0'+getMM(new Date(nowTime.getTime()+i*24*60*60*1000)):getMM(new Date(nowTime.getTime()+i*24*60*60*1000)))+"月"+(getDD(new Date(nowTime.getTime()+i*24*60*60*1000))<10?'0'+getDD(new Date(nowTime.getTime()+i*24*60*60*1000)):getDD(new Date(nowTime.getTime()+i*24*60*60*1000)))+"日\
+                    </li>")
+            }
+        //小时滚动
+            mySwiper_hh = new Swiper ('.swiper-container_hh', {
+                direction: 'vertical',              //可设置水平(horizontal)或垂直(vertical)
+                setWrapperSize :true,               //开启这个设定会在Wrapper上添加等于slides相加的宽高，在对flexbox布局的支持不是很好的浏览器中可能需要用到
+                slidesPerView : 3,                  //设置slider容器能够同时显示的slides数量
+                centeredSlides : true,              //若为真，那么活动块会居中，而非默认状态下的居左
+                speed:100,                          //速度
+                roundLengths : true,                //宽高取整
+                observer:true,
+                onSlideChangeEnd: function(swiper){
+                    HH=$('#hh>ul>li').eq(swiper.activeIndex).html();
+                }   
+            })
+        //日期滚动
+            mySwiper_dd = new Swiper ('.swiper-container_dd', {
+                direction: 'vertical',              //可设置水平(horizontal)或垂直(vertical)
+                setWrapperSize :true,               //开启这个设定会在Wrapper上添加等于slides相加的宽高，在对flexbox布局的支持不是很好的浏览器中可能需要用到
+                slidesPerView : 3,                  //设置slider容器能够同时显示的slides数量
+                centeredSlides : true,              //若为真，那么活动块会居中，而非默认状态下的居左
+                speed:100,                          //速度
+                roundLengths : true,                //宽高取整
+                observer:true,
+                onSlideChangeEnd: function(swiper){
+                    DD=$('#dd>ul>li').eq(swiper.activeIndex).attr('data-time');
+                }
+            }) 
+        //取消
+            $('#timeClose').on('touchend',function(){
+                $('#timerWrap').hide();
+            })
+        //确定
+            $('#timeOk').on('touchend',function(){
+                $('#timerWrap').hide();
+                $.ajax({
+                    url:'http://www.easybots.cn/api/holiday.php?d='+DD+'&ak=k381.659a5150a2e8efcd53b75a423e263997@jkzdw.com',
+                    async: false,
+                    success:function(res){
+                        var str=JSON.parse(res);
+                        HolidayDay=1;
+                        for(a in str){
+                            if (str[a]==2) {
+                                HolidayDay=2;
+                            }
+                        }
+                        $('.detailThree #detailDate').html(DD+" "+HH);
+                        new TipBox({type:'tip',iconStr:'服务时间',colorType:'doctor',str:"<p><span class='thirtySix'>您的服务时间从:</span><br><span class='color thirtySix'>"+DD+" "+HH+"</span><br><span class='thirtySix'>开始</span></p>",Ok:'知道了',hasBtn:true});
+                        placeOrder.timeDoctor = DD+" "+HH;
+                        localStorage.setItem('placeOrder', JSON.stringify(placeOrder));
+                        if (placeOrder.serviceTimeMoney_d) {
+                            orderMoney=placeOrder.serviceTimeMoney_d*HolidayDay;
+                            $('.orderPrice').text('￥'+returnFloat(orderMoney));
+                            $('.detailMoney').text(returnFloat(orderMoney)+'元');
+                            $('.serviceMoney').text(returnFloat(placeOrder.serviceTimeMoney_d)+'元');
+                            $('.detailMouthMoney').text(returnFloat(parseInt(placeOrder.relTimeMoney_d*(HolidayDay-1)))+'元');
+                        } 
+                    }
+                })
+            })
+        mySwiper_dd.slideTo(0, 0, true);
+        mySwiper_hh.slideTo(0, 0, true);
+    }
+
+</script>
+

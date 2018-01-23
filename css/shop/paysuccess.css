@@ -1,0 +1,148 @@
+
+.paysuccess{
+	/*background: url('../../img/shop/paysuccess.png') no-repeat;
+	background-size:100%; */
+	/*margin-left:.5rem;
+	margin-right:.5rem;*/
+	/*height: 35rem;*/
+	font-size:0.4rem;
+	/*overflow: hidden;*/
+	/*box-shadow: 0 0 1rem .22rem #ccc;*/
+}
+.blockzhezhao,.blockzhezhao2{
+	position: fixed;
+	top: 0%;
+	left: 0%;
+	width: 100%;
+	height: 100%;
+	background-color: black;
+	z-index:300;
+	opacity:.4;
+	/*display: none;*/
+}
+.zhezhaocontain{
+	position: fixed;
+	top: 1.5rem;
+	left: 0%;
+	width: 90%;
+	height: 70%;
+	margin-left: 5%;
+	margin-right: 5%;
+	z-index:400;
+	border-radius: .8rem;
+	-moz-border-radius: .8rem;
+  -webkit-border-radius: .8rem;
+	/*overflow: scroll;*/
+	 background:#FFF;
+	 font-size:0.4rem;
+	 /*display: none;*/
+}
+.zhezhaocontain2{
+	position: fixed;
+	top: 1.5rem;
+	left: 0%;
+	width: 95%;
+	height: 80%;
+	margin-left: 2.5%;
+	margin-right: 2.5%;
+	z-index:400;
+	border-radius: .8rem;
+	-moz-border-radius: .8rem;
+  -webkit-border-radius: .8rem;
+	/*overflow: scroll;*/
+	 /*background:#FFF;*/
+	 font-size:0.4rem;
+	 /*display: none;*/
+}
+.paysuccess>div{
+   padding-bottom:1rem;
+   padding-left:1.2rem;
+   padding-right:1.2rem;
+}
+.paysuccess>div:nth-child(1){
+   height:50%;
+   margin-left:1.2rem;
+   margin-right:1.2rem;
+   /*margin-bottom: 2rem;*/
+   padding:0;
+  /* padding-bottom:1rem;
+   padding-left:1.2rem;
+   padding-right:1.2rem;*/
+   background: url('../../img/shop/paysuccess.png');
+   background-size: cover;
+   background-repeat:no-repeat; 
+}
+.paysuccess>div:nth-child(2){
+   /*margin-top:17.2rem;*/
+   margin-top:1rem;
+}
+.paysuccess>div>span{
+	display: block;
+	color:#929292;
+}
+.paysuccess>div>span:nth-child(1){
+	float:left;
+}
+.paysuccess>div>span:nth-child(2){
+	float:right;
+}
+.detailsbtn{
+	/*background: green;*/
+	padding-top: .4rem;
+	padding-bottom:.4rem;
+	margin:0 auto;
+	text-align: center;
+	color:#82C5EE;
+	font-size:.4rem;
+}
+/*支付失败的*/
+.zhezhaocontain2{
+	background:transparent;
+}
+.payfailure{
+	width:100%;
+	height:70%;
+	/*margin-top:2rem;*/
+	background:url("../../img/shop/payfailure.png") no-repeat;
+	background-size:100% 100%;
+	position: relative;
+}
+.allzhifuimg{
+     position: relative;
+}
+.payfailure img{
+	display: block;
+	width:50%;
+	margin-left: 25%;
+	margin-right: 25%;
+	position: absolute;
+	bottom:.5rem;
+}
+/*.repeatbtn{
+	 position: absolute;
+    bottom: 1rem;
+    width: 100%;
+}
+.repeatbtn a{
+	display: block;
+    padding: .2rem 1rem;
+    margin: 0 auto;
+    width: 4rem;
+    font-size: .7rem;
+    color: #82c5ee;
+    text-align: center;
+    border: 0.06rem solid #82c5ee;
+    border-radius: 1.75rem;
+}*/
+.zhifugoback{
+    width: 3rem;
+    position: absolute;
+    height: 1rem;
+    line-height: 1rem;
+    text-align: center;
+    font-size: .5rem;
+    color: #ddd;
+    right: -1.2rem;
+    top: -1rem;
+    display: none;
+}

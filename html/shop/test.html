@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Document</title>
+   <!-- <script type="text/javascript" src="jquery.min.js"></script> -->
+   <script src="../../js/without/jquery.min.js"></script>
+</head>
+<body>
+    <button class="hhe">click</button>
+</body>
+</html>
+<script>
+        var yuesaotimestring=[];
+        var yuesaotimestringaaa=[];
+        var i=1;
+        function getDate(datestr){
+          var temp = datestr.split("-");
+          var date = new Date(temp[0],temp[1],temp[2]);
+          return date;
+        }
+        var start = "2017-09-25";
+        var end = "2017-10-3";
+        var startTime = getDate(start);
+        var endTime = getDate(end);
+        while((endTime.getTime()-startTime.getTime())>=0){
+           i++;
+           var year = startTime.getFullYear();
+           var month = startTime.getMonth().toString().length==1?"0"+startTime.getMonth().toString():startTime.getMonth();
+           var day = startTime.getDate().toString().length==1?"0"+startTime.getDate():startTime.getDate();
+           startTime.setDate(startTime.getDate()+1);
+           yuesaotimestring.push(year+month+day);
+           yuesaotimestringaaa=yuesaotimestring;
+           i--;
+        }
+$('.hhe').click(function(){
+  console.log(yuesaotimestringaaa);
+              if(i==1){
+               $.ajax({
+                  url:'http://www.easybots.cn/api/holiday.php?d='+yuesaotimestringaaa+'&ak=k381.659a5150a2e8efcd53b75a423e263997@jkzdw.com',
+                  type:'GET',
+                  success:function(data){
+                    console.log(data);
+                    // console.log(datashuju);
+                  }
+                })
+              }
+})
+</script>

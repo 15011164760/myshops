@@ -1,0 +1,249 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>商城</title>
+	<meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=no">
+	<link rel="stylesheet" href="../../css/shop/shop.css">
+  <link rel="stylesheet" href="../../css/shop/swiper.min.css">
+	<script type="text/javascript" src="../../js/inner/shop/rem.js"></script>
+  <script src="../../js/without/jquery.min.js"></script>
+   <!-- <script src="../../js/without/viewprot.js"></script> -->
+  <script type="text/javascript" src="../../js/without/swiper.jquery.min.js"></script>
+  <!-- <script type="text/javascript" src="../../js/without/jquery.fly.min.js"></script> -->
+  <!-- <script type="text/javascript" src="../../js/without/requestAnimationFrame.js"></script> -->
+  <!-- <script type="shop.js"></script> -->
+  <style>
+    .alertcitychoose{
+      width:100%;
+      background: #fff;
+      position: fixed;
+      bottom: 0rem;
+      display: none;
+      z-index: 401;
+    }
+    .alertcitychoose>p{
+      /*overflow: hidden;*/
+      border-bottom: 1px solid #ddd;
+       height:4rem;
+    }
+     .alertcitychoose>p>span{
+      display: block;
+      line-height: 4rem;
+     }
+    .alertcitychoose>p>span:nth-child(1){
+      float: left;
+      color:#929292; 
+      font-size:1.125rem; 
+       padding-left:1rem;
+    }
+     .alertcitychoose>p>span:nth-child(2){
+      float: right;
+       /*padding-top:1rem;*/
+      padding-right:1rem;
+      color:#6CBAB5; 
+      font-size:1.125rem;
+    }
+    .xialacityimg{
+       width:1rem;
+       height:.6rem;
+       margin-top:1rem;
+       margin-right:1rem;
+    }
+    .havechoose{
+      background: #f5f5f5;
+       border-bottom: 1px solid #ddd;
+       height:4rem;
+       display: none;
+    }
+    .havechoose>span{
+      display: block;
+      float: left;
+      background: #fff;
+      color:#2E9C95;
+        height:2rem;
+        line-height: 2rem;
+        margin-top:1rem; 
+        margin-left:1rem; 
+        padding-left:.75rem;
+        padding-right:.75rem;
+    }
+    .seeallcitys{
+      height:20rem;
+     /*background: #ccc;*/
+     overflow-y: scroll;
+     display: none;
+    }
+    .seeallcitys>li{
+      height:3rem;
+      line-height: 3rem;
+      border-bottom: 1px solid #f1f1f1;
+      padding-left:1rem;
+      color:#666666;
+      /*display: none;*/
+    }
+ .blockzhezhao{
+    position: fixed;
+    top: 0%;
+    left: 0%;
+    width: 100%;
+    height: 100%;
+    background-color: black;
+    z-index:300;
+    opacity:.5;
+    display: none;
+ }
+  </style>
+</head>
+<body>
+      <!-- 图片轮播开始处 -->
+        <!-- <div class="swiper-container">
+            <div class="swiper-wrapper">
+                <div class="swiper-slide">
+                    <a href="javascript:void(0);">
+                    <img src="../../img/shop/1.png" alt=""  ondragstart="return false;"></a>
+                </div>
+                <div class="swiper-slide">
+                    <a href="javascript:void(0);">
+                       <img src="../../img/shop/2.png" alt=""  ondragstart="return false;">
+                    </a>
+                </div>
+                <div class="swiper-slide">
+                    <a href="javascript:void(0);"><img src="../../img/shop/3.png" alt=""></a>
+                </div>
+            </div> -->
+            <!-- 如果需要分页器 -->
+            <!-- <div class="swiper-pagination"></div> -->
+            <!-- 如果需要导航按钮 -->
+            <!-- <div class="swiper-button-prev"></div> -->
+            <!-- <div class="swiper-button-next"></div> -->
+            <!-- 如果需要滚动条 -->
+           <!--  <div class="swiper-scrollbar"></div>
+        </div> -->
+        <div class="blockzhezhao"></div>
+        <div class="choosecitythree">选择城市</div>
+        <div class="alertcitychoose">
+             <p>
+                 <span class="cancelcitybtn">取消</span>
+                 <span  class="confirmcitys">确定</span>
+             </p>
+             <p class="donotcarecity">
+                 <span style="color:#000">不限籍贯</span>
+                 <span></span>
+             </p>
+             <p class="choosethreeself">
+                 <span style="color:#000">自选</span>
+                 <span style="color:#2E9C95;font-size:.75rem;float:left">(*最多选择3个省份)</span>
+                 <span style="float: right"><img src="xiala.png" alt="" class="xialacityimg"></span>
+             </p>
+            <div class="havechoose">
+            </div>
+              <ul  class="seeallcitys">
+                        <li>北京</li>
+                        <li>天津</li>
+                        <li>河北 </li>
+                        <li>山西 </li>
+                        <li>内蒙古 </li>
+                        <li>辽宁 </li>
+                        <li>吉林 </li>
+                        <li>黑龙江</li>
+                        <li>上海</li>
+                        <li>江苏</li>
+                        <li>浙江</li>
+                        <li>安徽</li>
+                        <li>福建</li>
+                        <li>江西</li>
+                        <li>山东</li>
+                        <li>河南</li>
+                        <li>湖北</li>
+                        <li>湖南</li>
+                        <li>广东</li>
+                        <li>广西</li>
+                        <li>海南</li>
+                        <li>重庆</li>
+                        <li>四川</li>
+                        <li>贵州</li>
+                        <li>云南</li>
+                        <li>西藏</li>
+                        <li>陕西</li>
+                        <li>甘肃</li>
+                        <li>青海</li>
+                        <li>宁夏</li>
+                        <li>新疆</li>
+                        <li>港澳台</li>
+              </ul>
+        </div>
+        <div class="wodetext"></div>
+</body>
+</html>
+<script>
+// var mySwiper = new Swiper ('.swiper-container', {
+// direction: 'vertical',//水平还是垂直方向
+// loop: true,//循环
+// // 如果需要分页器
+// pagination: '.swiper-pagination',
+// // 如果需要前进后退按钮
+// // nextButton: '.swiper-button-next',
+// // prevButton: '.swiper-button-prev',
+// // 如果需要滚动条
+// scrollbar: '.swiper-scrollbar',
+// })
+ // var mySwiper = new Swiper ('.swiper-container', {
+ //    direction: 'vertical',
+ //    // loop: true,
+    
+ //    // 如果需要分页器
+ //    pagination: '.swiper-pagination',
+    
+ //    // 如果需要前进后退按钮
+ //    nextButton: '.swiper-button-next',
+ //    prevButton: '.swiper-button-prev',
+    
+ //    // 如果需要滚动条
+ //    scrollbar: '.swiper-scrollbar',
+ //  }) 
+  $('.choosecitythree').on('touchend',function(){
+      $('.blockzhezhao,.alertcitychoose').show();
+      $('.havechoose').html('');
+  })
+  var a=1;
+  $('.choosethreeself').on('touchend',function(){
+       if(a%2!=0){
+          $('.seeallcitys,.havechoose').show();
+         $('.seeallcitys>li').on('touchend',function(){
+               if($('.havechoose>span').length==undefined||$('.havechoose>span').length<=2){
+                   $('.havechoose').append('<span>'+$(this).text()+'</span>');
+               }
+              $('.havechoose').children('span').on('touchend',function(){
+                   $(this).remove();
+              })
+         })
+       }
+       a++;
+  })
+  $('.donotcarecity').on('touchend',function(){
+      $('.blockzhezhao,.alertcitychoose').hide();
+       $('.havechoose').children('span').remove();
+       $('.wodetext').text('不限');
+     })
+   $('.cancelcitybtn').on('touchend',function(){
+      $('.alertcitychoose,.blockzhezhao').hide();
+      $('.havechoose').children('span').remove();
+      $('.wodetext').text('不限');
+  })
+   $('.confirmcitys').on('touchend',function(){
+       if($('.havechoose').html()==''){
+           $('.wodetext').text('不限');
+       }else{
+           var str='';
+          $('.havechoose>span').each(function(){
+              str+=$(this).text()+'>';
+          })
+          str=str.substring(0,(str.length-1));
+          $('.wodetext').text(str);
+          $('.alertcitychoose,.blockzhezhao').hide();
+          $('.havechoose').children('span').remove();
+       }
+   })
+</script>
+

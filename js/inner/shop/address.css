@@ -1,0 +1,232 @@
+body,
+html {
+  width: 100%;
+  background: #f8f8f8;
+}
+header {
+  position: relative;
+  height: 1.5rem;
+  width: 100%;
+  margin-bottom: 0.09333333rem;
+  background: #8CD3FD;
+}
+header #goBack{
+  width: 1.5rem;
+  height: 1.5rem;
+  line-height: 1.5rem;
+  padding-left: 0.5rem;
+  position: absolute;
+  top: 0.2rem;
+  left: 0;
+}
+header #goBack img{
+  width: 0.4rem;
+}
+header p{
+  display: inline-block;
+  width: 100%;
+  line-height: 2rem;
+  font-size: 0.48rem;
+  color: #fff;
+  text-align: center;
+}
+.wrap {
+  width: 100%;
+  box-sizing: border-box;
+  padding: 0.2rem 0.4rem;
+  -webkit-touch-callout:none;
+  -webkit-user-select:none;
+  -khtml-user-select:none;
+  -moz-user-select:none;
+  -ms-user-select:none;
+  user-select:none;
+}
+.wrap .addressWrap {
+  position: relative;
+  width: 100%;
+  height: 2.82666667rem;
+  box-sizing: border-box;
+  padding: 0.65333333rem 0.41333333rem 0.69333333rem 0.44rem;
+  font-family: PingFang-SC-Medium;
+  box-shadow: 0 0 0.13333333rem #c5c4cb;
+  border-radius: 0.13333333rem;
+  font-size: 0.4rem;
+  margin-bottom: 0.2rem;
+}
+.wrap .addressWrap .addressP1 .name {
+  display: inline-block;
+  font-size: 0.53333333rem;
+  font-family: SimHei;
+  color: #27272A;
+  width: 1.98666667rem;
+}
+.wrap .addressWrap .addressP1 .tel {
+  display: inline-block;
+  font-family: PingFang-SC-Medium;
+  font-size: 0.53333333rem;
+  color: #27272A;
+  width: 3.90666667rem;
+}
+.wrap .addressWrap .addressP1 .moren {
+	margin-left: 1rem;
+  width: 1rem;
+  height: 0.5rem;
+}
+.wrap .addressWrap .addressP2 {
+  /*line-height: 1.53333333rem;*/
+  height:2rem;
+  padding: .5rem 0;
+  line-height: 2rem
+  background: red;
+}
+.wrap .addressWrap .addressP2 .addressIcon {
+  width: 0.24rem;
+  height: 0.32rem;
+  margin-right: 0.10666667rem;
+  padding-top:-1rem;
+  /*display: none;*/
+}
+.wrap .addressWrap .addressP2 .addressName {
+  display: inline-block;
+  width: 7rem;
+  text-overflow: ellipsis;
+  overflow: hidden;
+  white-space: nowrap;
+  font-family: PingFang-SC-Medium;
+  font-size: 0.37333333rem;
+  color: #4D4D4D;
+}
+.wrap .addressWrap .footerImg {
+  position: absolute;
+  top: 2.82666667rem;
+  left: 0.13333333rem;
+  width: 9.04rem;
+  height: 0.04rem;
+}
+footer {
+  position: fixed;
+  width: 100%;
+  height: 1.32rem;
+}
+footer img {
+  width: 100%;
+}
+/*添加、修改地址*/
+  #changeAddress {
+    display: none;
+    position: fixed;
+    top: 0;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    background: rgba(0, 0, 0, 0.5);
+    font-size: 0.4rem;
+  }
+  #changeAddress .closeBtn {
+    position: absolute;
+    top: 0.7rem;
+    left: 8rem;
+    width: 1.12rem;
+    height: 1.12rem;
+    padding: 0.5rem;
+  }
+  #changeAddress .changeAddressBag {
+    position: absolute;
+    left: 0.14666667rem;
+    top: 2.38rem;
+    margin-left: 0.24rem;
+    width: 9.2rem;
+    height: 10.93333333rem;
+  }
+  #changeAddress .changeAddress {
+    box-sizing: border-box;
+    position: relative;
+    width: 9.2rem;
+    padding: 0.8rem 0.69333333rem 0.69333333rem 0.85333333rem;
+    border-radius: 0.13333333rem 0.13333333rem 0 0;
+    height: 9rem;
+    background: #fff;
+  }
+  #changeAddress .changeAddress .Comtent {
+    position: relative;
+    font-family: AdobeHeitiStd-Regular;
+    color: #969494;
+    font-size: 0.42rem;
+    height: 1.54666667rem;
+    padding-top: 0.53333333rem;
+  }
+  #changeAddress .changeAddress .Comtent .row1 {
+    margin-bottom: 0.3rem;
+  }
+  #changeAddress .changeAddress .Comtent .row2 {
+    font-family: AdobeHeitiStd-Regular;
+    color: #505050;
+    width: 7rem;
+    font-size: 0.38666667rem;
+    line-height: 0.6rem;
+  }
+  #changeAddress .changeAddress .Comtent .inputXuxian {
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    width: 100%;
+    height: 0.02666667rem;
+  }
+  #changeAddress .Comtent:last-child{
+    margin-top: 0.3rem;
+  }
+  #changeAddress .default{
+    font-family: PingFangSC-Medium;
+    color: #505050; 
+    font-size: 0.4rem;
+    float: left;
+  }
+  #changeAddress #default {
+    float: right;
+    width: 1.2rem;
+    height: 0.7rem;
+  }
+  #changeAddress #btn_save {
+    width: 9.2rem;
+    height: 1.36rem;
+    background: url('../../../img/MyPage/address/saveAdress.png') no-repeat;
+    background-size: 9.2rem 1.36rem;
+  }
+  .row2:-webkit-input-placeholder {
+    font-family: AdobeHeitiStd-Regular;
+    color: #505050;
+    font-size: 0.38666667rem;
+    opacity: 1;
+  }
+  .row2::-moz-placeholder {
+    font-family: AdobeHeitiStd-Regular;
+    color: #505050;
+    font-size: 0.38666667rem;
+    opacity: 1;
+  }
+  .row2::placeholder {
+    font-family: AdobeHeitiStd-Regular;
+    color: #505050;
+    font-size: 0.38666667rem;
+    opacity: 1;
+  }
+  .remove{
+    display: none;
+    position: absolute;
+    top: 0;
+    right: 0;
+    width: 1rem;
+    height: 1rem;
+    -webkit-animation:mymove 1.2s infinite;
+    -moz-animation:mymove 1.2s infinite;
+  }
+  @-webkit-keyframes mymove{
+      0%,100%{-webkit-transform:translateY(0);}
+      10%,30%,50%,70%, 90%{-webkit-transform:translateY(-2px);}
+      20%,40%,60%,80%{-webkit-transform:translateY(2px);}
+  }
+  @-moz-keyframes mymove{
+      0%,100%{-moz-transform:translateY(0);}
+      10%,30%,50%,70%, 90%{-moz-transform:translateY(-2px);}
+      20%,40%,60%,80%{-moz-transform:translateY(2px);}
+  }

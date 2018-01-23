@@ -1,0 +1,281 @@
+*{
+	margin:0px;
+	padding:0px;
+	list-style:none;
+	outline:none;
+	border:0px;
+	text-decoration:none;
+	font-family: PingFangSC-Medium;
+}
+/*头部开始*/
+/*@font-face
+{
+font-family: myFirstFont;
+src: url(font/applefang.woff);
+}*/
+.header-topfixed{
+	position: fixed;
+	left:0px;
+	top:0px;
+	z-index: 10000;
+}
+.header-top{
+	width:100%;
+	height:3rem;
+	background:#82c5ee;
+}
+.header-top>div{
+	width:100%;
+	height:3rem;
+	color: #FFF;
+	overflow: hidden;
+}
+.header-top>div>span{
+	display:block;
+	float:left;
+	line-height:3rem;
+}
+.header-top>div>span:nth-child(1){
+	width:10%;
+	padding-top:0px;
+	line-height:3rem;
+}
+.header-top>div>span:nth-child(1) img{
+	display: block;
+	margin-top:.8rem;
+	margin-bottom:1.125rem;
+	margin-left:0.9375rem;
+    width:0.75rem;
+}
+.header-top>div>span:nth-child(2){
+	width:80%;
+	font-size: 1.125rem;
+	text-align: center;
+}
+.header-top>div>span:nth-child(3){
+	float: right;
+	width:10%;
+}
+.header-top>div>span:nth-child(3) img{
+	margin-top:0.875rem;
+	margin-bottom:0.875rem;
+	/*padding-right:20px;*/
+	width:1.25rem;
+	height:1.25rem;
+}
+/*头部结束*/
+.shop-show{
+	width:100%;
+	overflow: hidden;
+}
+.shop-show{
+	width:100%;
+	margin-bottom:0.3125rem;
+}
+.shop-big-img{
+	width:100%;
+	height:10.375rem;
+	/*overflow: hidden;*/
+}
+/*.shop-big-img img{
+	width:100%;
+}*/
+/*轮播开始*/
+ .swiper-container img {
+        width: 100%;
+        height:10.375rem;
+    }
+    
+    .content {
+        background-color: #ddd;
+    }
+    
+    .content img {
+        display: block;
+        margin-top: -4px;
+    }
+    
+    .menu a {
+        display: inline-block;
+        width: 18%;
+        text-align: center;
+        font-size: 1.4rem;
+        margin: 10px 0;
+    }
+    
+    .menu a i {
+        font-size: 2.4rem;
+        color: red;
+    }
+    
+    .menu a:link {
+        text-decoration: none;
+        color: #666;
+    }
+    
+    .menu a:visited {
+        text-decoration: none;
+        color: #666;
+    }
+/*轮播结束*/
+.shop-small-img{
+	    overflow: hidden;
+		border-top:5px solid #f1f1f1;
+		/*background: #ccc;*/
+		clear:both;
+
+	}
+.shop-small-img>div{
+	/*border:1px solid red;*/
+	/*margin-top:0.125rem;*/
+	width:98%;
+	/*clear:both;*/
+	float:left;
+	overflow: hidden;
+	margin-bottom: .5rem;
+	height:18.5rem;
+	box-shadow: #ccc 0px 0px 2rem;
+}
+/*.shop-small-img>div:nth-child(even){
+	margin-left: 1%;
+}
+.shop-small-img>div:nth-child(odd){
+	margin-right: 1%;
+}*/
+/*.shop-small-img>div>a{
+	display: block;
+}*/
+/*.shop-small-img>div:nth-child(1){
+	float: left;
+	margin-right: 0%;
+	padding-bottom:1.25rem;
+}
+.shop-small-img>div:nth-child(2){
+	float:left;
+	margin-left: 0%;
+	padding-bottom:1.25rem;
+}*/
+.shop-small-img>div>a{
+	 display: block;
+	width:100%;
+	height:11.68rem;
+}
+.shop-small-img>div>a>img{
+	width:100%;
+	height:11.68rem;
+}
+.shop-text{
+	height:82px;
+}
+.shop-text span{
+	display: block;
+	padding-left:0.625rem;
+	padding-top:1rem;
+}
+.shop-text span a{
+	display: block;
+}
+.shop-text span:nth-child(1){
+	padding:0.75rem 0.8125rem 0rem 0.6875rem;
+	color:#282828;
+	font-size:1.06rem;
+	/*font-family: PingFangSC-Medium;*/
+}
+.shop-text span:nth-child(1) a{
+	color:#282828;
+}
+.shop-text span:nth-child(2){
+	/*font-family: STFangsong;*/
+	padding-top:0.3rem;
+	color:#767676;
+	font-size:0.75rem;
+}
+.shop-text span:nth-child(2) a{
+	color:#767676;
+}
+.shop-text>span:nth-child(3){
+	/*font-family: MicrosoftYaHei;*/
+	padding-top:.3rem;
+	color:#EE1616;
+	font-size:1.25rem;
+	/*height:110px;*/
+}
+.shop-text span:nth-child(3)>span{
+	display: inline-block;
+	padding:0px;
+	color:#EE1616;
+	font-size:1.125rem;
+}
+.shop-text span:nth-child(3) img{
+	display:block;
+	float:right;
+	width:1.5625rem;
+	height:1.5625rem;
+	padding-right:0.8125rem;
+}
+/*动画飞入购物车css样式开始*/
+.m-sidebar{position: fixed;top: 0;right: 0;background: #82c5ee;z-index: 2000;width: 35px;height: 100%;font-size: 12px;color: #fff;} 
+.cart{color: #fff;text-align:center;line-height: 20px;padding: 200px 0 0 0px;} 
+.cart span{display:block;width:20px;margin:0 auto;} 
+.cart i{width:35px;height:35px;display:block; background:url(../../img/shop/car.png) no-repeat;} 
+#msg{position:fixed; top:300px; right:35px; z-index:10000; width:0px; height:52px; line-height:52px; font-size:20px; text-align:center; color:#fff; background:#82c5ee; display:none} 
+/*动画飞入购物车css样式结束*/
+/*#end{
+	position: relative;
+}
+#end>span{
+	position: absolute;
+	top:0.2rem;
+	left:0.625rem;
+	display: block;
+	width:1rem;
+	height:1rem;
+	border-radius: 50%;
+	background: #82c5ee;
+	color:red;
+	font-size: 16px;
+	line-height: none;
+}*/
+/*候选飞入特效*/
+#msg{
+		position:fixed; 
+		top:18rem; 
+		right:2rem;
+		z-index:10000; 
+		width:1px; 
+		height:3.25rem;
+		line-height:3.25rem; 
+		font-size:1.25rem;
+		text-align:center;
+		color:#fff;
+		background:#333;
+		display:none
+	  } 
+	  #msgcart{
+		position:fixed; 
+		top:18rem; 
+		right:8rem;
+		z-index:10000; 
+		/*width:1px; */
+		height:8rem;
+		width:8rem;
+		line-height:3.25rem; 
+		font-size:1.25rem;
+		text-align:center;
+		color:#fff;
+		/*background:#333;*/
+		display:none;
+	  } 
+	  .cartimgsuccess{
+	  	width: 100%;
+	  	/*height:7rem;*/
+	  	/*height:100%;*/
+	  }
+.u-flyer{
+	display: block;
+	width: 2rem;
+	height:2rem;
+	border-radius: 50%;
+	position: fixed;
+	z-index: 9999;
+} 

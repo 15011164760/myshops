@@ -1,0 +1,125 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>订单结算</title>
+	<meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=no">
+  <meta name="format-detection" content="telephone=no" />
+  <script type="text/javascript" src="../../js/inner/shop/rem.js"></script>
+  <link rel="stylesheet" href="../../css/shop/shop.css">
+  <link rel="stylesheet" href="../../css/shop/pay.css">
+  <link rel="stylesheet" href="../../css/styles/mdialogescort.css">
+<script type="text/javascript" src="../../js/without/jquery.min.js"></script>
+<script type="text/javascript" src="../../js/inner/shop/pay.js"></script>
+<script type="text/javascript" src="../../js/without/mdialogescort.js"></script>
+<!-- <script src="../../js/without/zepto.min.js"></script> -->
+<!-- <script src="../../js/without/mdialog.js"></script> -->
+</head>
+<body>
+<!-- 头部开始 -->
+	<div class="header-top header-topfixed"">
+	   <div>
+			<span class="backup"><a href="javascript:void(0);"><img src="../../img/shop/back.png" alt="" ondragstart="return false;"></a></span>
+			<span>订单结算</span>
+	   </div>
+	</div>
+  <div style="height:3rem"></div>
+  <!-- 头部结束 -->
+  <div class="user-set">
+      <div class="user-info">
+         <span class="username">请填写姓名</span>
+         <span class="phone" style="color:#333"> 请填写联系方式</span> 
+         <span class="defaultimg"><img src="../../img/shop/default.png" alt="" ondragstart="return false;"></span>
+         <span><img src="../../img/shop/rightbtn.png" alt=""  class="rightbtnimg"></span>
+      </div>
+      <div class="user-info-addr">
+            <span><img src="../../img/shop/address.png" alt="" ondragstart="return false;"></span>
+            <span class="address">请填写地址</span>
+      </div>
+  </div>
+  <div class="rainbow">
+     <img src="../../img/shop/rainbow.png" alt="" ontouchstart="return false">
+  </div>
+  <div class="allnewshops" ontouchstart="return false">
+  </div>
+ <!--  <div class="newshops">
+      <a href="">
+        <div class="newshop-img"><img src="../../img/shop/newshop.png" alt="" ondragstart="return false;"></div>
+        <div class="newshop-intro">
+           <span>【新品】电话手表智能心率监测手表手机男士亲子通话防丢</span>
+           <span>商品介绍:介绍性文字描述介绍性文字描述介绍性绍性文字描述介绍性文字描</span>
+           <div class="one-price">
+             <span>￥8866.00</span>
+             <span>X1</span>
+           </div>
+        </div>
+      </a>
+  </div>
+ <div class="newshops">
+    <a href="">
+      <div class="newshop-img"><img src="../../img/shop/newshop.png" alt="" ondragstart="return false;"></div>
+      <div class="newshop-intro">
+         <span>【新品】电话手表智能心率监测手表手机男士亲子通话防丢</span>
+         <span>商品介绍:介绍性文字描述介绍性文字描述介绍性绍性文字描述介绍性文字描</span>
+         <div class="one-price">
+           <span>￥8866.00</span>
+           <span>X1</span>
+         </div>
+      </div>
+    </a>
+ </div>
+ <div class="newshops">
+    <a href="">
+      <div class="newshop-img"><img src="../../img/shop/newshop.png" alt="" ondragstart="return false;"></div>
+      <div class="newshop-intro">
+         <span>【新品】电话手表智能心率监测手表手机男士亲子通话防丢</span>
+         <span>商品介绍:介绍性文字描述介绍性文字描述介绍性绍性文字描述介绍性文字描</span>
+         <div class="one-price">
+           <span>￥8866.00</span>
+           <span>X1</span>
+         </div>
+      </div>
+    </a>
+ </div>
+ <div class="newshops">
+    <a href="">
+      <div class="newshop-img"><img src="../../img/shop/newshop.png" alt="" ondragstart="return false;"></div>
+      <div class="newshop-intro">
+         <span>【新品】电话手表智能心率监测手表手机男士亲子通话防丢</span>
+         <span>商品介绍:介绍性文字描述介绍性文字描述介绍性绍性文字描述介绍性文字描</span>
+         <div class="one-price">
+           <span>￥8866.00</span>
+           <span>X1</span>
+         </div>
+      </div>
+    </a>
+ </div> -->
+<!--  <div class="discount discounts" style="display: none">
+    <a href="javascript:void(0);">
+       <span>优惠券</span>
+       <span>></span>
+       <span>未使用</span>
+    </a>
+ </div> -->
+  <div class="discount discounts">
+    <a href="javascript:void(0);">
+       <span>配送费</span>
+       <!-- <span>></span> -->
+       <!-- <span><img src="../../img/shop/rightbtn.png" alt=""  class="rightbtnimg"></span> -->
+       <span id="freight">0</span>
+       <!-- 配送的费用 -->
+    </a>
+ </div>
+ <div class="discount discount2">
+   <textarea placeholder="选填：给商家留言(100字以内)" id="field" maxlength="100"></textarea>
+    <!-- 您还可以输入:<input name="remLen" type="text" value="100" size="3" readonly="readonly" id="remLen">个字符  -->
+ </div>
+ <div class="btn-footer">
+          <span class="allprice">实付款:￥0.00</span>
+          <!-- <span>加入购物车</span> -->
+          <span class="paymoney"><a href="javascript:void(0)">立即付款</a></span>
+  </div>
+  <div class="msg"></div>
+</body>
+</html>
+ <script src="../../js/without/viewprot.js"></script>

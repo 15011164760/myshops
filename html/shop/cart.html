@@ -1,0 +1,72 @@
+<!DOCTYPE html>
+<html lang="zh" ng-app="CartModule">
+<head>
+  <meta charset="UTF-8">
+  <title>购物车</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=no">
+  <link rel="stylesheet" href="../../css/shop/shop.css">
+  <link rel="stylesheet" href="../../css/shop/cart.css">
+   <link rel="stylesheet" href="../../css/styles/mdialogescort.css">
+  <link rel="stylesheet" href="../../css/styles/mdialogescort.css">
+   <script src="../../js/without/viewprot.js"></script>
+   <script type="text/javascript" src="../../js/without/mdialogescort.js"></script>
+   <script type="text/javascript" src="../../js/inner/shop/rem.js"></script>
+   <script src="../../js/without/angular.min.js"></script>
+   <script src="../../js/without/jquery.min.js"></script>
+   <!-- <script src="../../js/without/jquery.mobile-1.4.5.min.js"></script> -->
+   <script src="../../js/inner/shop/cart.js"></script>
+   <script type="text/javascript" src="../../js/without/mdialogescort.js"></script>
+ <!--  <script src="../../js/without/zepto.min.js"></script>
+ <script src="../../js/without/mdialog.js"></script> -->
+</head>
+<body>
+  <div class="header-top header-topfixed"">
+        <div>
+            <span class="backup"><a href="javascript:void(0)"><img src="../../img/shop/back.png" alt="" ondragstart="return false;"></a></span>
+            <span>购物车</span>
+            <!-- <span><img src="../../img/shop/cart.png" alt=""></span> -->
+        </div>
+  </div>
+  <div style="height:3rem"></div>
+ <div class="wantbuyout" ng-controller="CartController" >
+  <!-- <div class="wantbuy">  -->
+  <div class="wantbuy" ng-repeat="cart in cartlist" goodname={{'shoploc'+cart.goodname}} ng-cloak> 
+      <div ng-mouseout="del2($index)" ng-mouseup="del3($index)" ng-mousedown="del($index,$event)">
+       <span>
+            <img src="../../img/shop/choose.png" alt="" class="singlechoose" ondragstart="return false;"> 
+          <input type="checkbox" ng-checked="all" ng-model="cart.isCheck" ng-click="fun($index)" class="singleinp">
+       </span>
+      </div>
+      <!-- ng-mouseout="del2($index)" ng-mouseup="del3($index)"  -->
+      <div class="cartlista"><img ng-src="/uploadFiles/uploadImgs/{{cart.imgsrc}}" alt="" class="cartlistaimg" ontouchstart="return false"></div>
+      <div class="wantbuytext">
+         <span>{{cart.goodname}}</span>
+         <span>名称：{{cart.brand}}&nbsp;&nbsp;型号：{{cart.goodmodel}}</span>
+         <span class="shop-price">
+                     <span>￥</span>
+                     <span>{{cart.price|number:2}}</span>
+                     <span class="shop-num">
+                          <div ng-click="jia($index)" onselectstart="return false;" style="-moz-user-select:none;">+</div>
+                          <input type="number"  ng-model="cart.num" onselectstart="return false;" style="-moz-user-select:none;">
+                          <div ng-click="jian($index)" onselectstart="return false;" style="-moz-user-select:none;">-</div>
+                     </span>
+         </span>
+      </div>
+  </div>
+  <div class="footers" style="height:3.125rem"></div>
+  <div class="msg">删除成功</div>
+  <div class="nowpay">
+      <span>
+      <!-- 控制全选全不选 -->
+             <input type="checkbox" ng-model="all" ng-checked="isAll" ng-click="change()"  class="all">
+              <img src="../../img/shop/choose.png" alt="" class="allselect">
+      </span>
+      <span>全选</span>
+      <span>合计：</span>
+      <span>￥{{total.price|number:2}}</span>
+      <span class="nowpayit" ng-click="delcart()">立即结算
+      </span>
+  </div>
+ </div>
+</body>
+</html>

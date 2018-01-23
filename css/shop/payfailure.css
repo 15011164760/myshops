@@ -1,0 +1,49 @@
+.blockzhezhao{
+	position: fixed;
+	top: 0%;
+	left: 0%;
+	width: 100%;
+	height: 100%;
+	background-color: black;
+	z-index:300;
+	opacity:.7;
+	/*display: none;*/
+}
+.zhezhaocontain{
+	position: fixed;
+	top: 1.5rem;
+	left: 0%;
+	width: 95%;
+	height: 80%;
+	margin-left: 2.5%;
+	margin-right: 2.5%;
+	z-index:400;
+	border-radius: .8rem;
+	-moz-border-radius: .8rem;
+  -webkit-border-radius: .8rem;
+	/*overflow: scroll;*/
+	 background:#FFF;
+}
+.payfailure{
+	padding: 2.0625rem 1.375rem 11rem;
+}
+.payfailure img{
+	display: block;
+	width:100%;
+}
+.repeatbtn{
+	position: absolute;
+	bottom: 4rem;
+	width:100%;
+}
+.repeatbtn a{
+	display:block;
+	padding: 0.5rem 3rem;
+	margin:0 auto;
+	width:9.375rem;
+	font-size: 1.5rem;
+	color:#82c5ee;
+	text-align:center;
+	border:0.125rem solid #82c5ee;
+	border-radius:3.5rem;
+}

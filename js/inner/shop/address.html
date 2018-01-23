@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html lang="zh">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width,initial-scale=1.0,maximum-scale=1.0, minimum-scale=1.0, user-scalable=no">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>地址管理</title>
+    <link rel="stylesheet" href="../../css/styles/reset.css">
+    <link rel="stylesheet" href="../../css/styles/mdialog.css">
+    <script type="text/javascript" src="../../js/without/viewprot.js"></script>
+    <script>
+        document.write("<link rel='stylesheet' href='../../css/MyPage/address/address.css?"+new Date().getTime()+"'>")
+    </script>
+    <script type="text/javascript" src="../../js/without/zepto.min.js"></script>
+    <script type="text/javascript" src="../../js/without/mdialog.js"></script>
+    <script>
+        document.write("<script type='text/javascript' src='../../js/inner/MyPage/address.js?"+new Date().getTime()+"'></scri"+"pt>")
+    </script>
+</head>
+
+<body>
+    <header>
+        <span id="goBack">
+            <img src="../../img/MyPage/setting/goBack.png" alt="">
+        </span>
+        <p>地址管理</p>
+    </header>
+    <div class='wrap'>
+    </div>
+    <footer>
+        <img src="../../img/MyPage/address/newAdress.png" alt="">
+    </footer>
+
+<!--添加、修改地址-->
+    <div id='changeAddress'>
+        <img class='closeBtn' src="../../img/MyPage/setting/closeBtn.png" alt="">
+        <div class='changeAddressBag'>
+            <div class='changeAddress'>
+                <div class='Comtent'>
+                    <p class='row1'>姓名</p>
+                    <input class="row2" id='userName' type="text" name="" placeholder="请输入姓名">
+                    <img class='inputXuxian' src="../../img/MyPage/setting/shuiX.png" alt="">
+                </div>
+                <div class='Comtent'>
+                    <p class='row1'>电话</p>
+                    <input class="row2" id="tel" type="tel" name="" placeholder="请输入电话号码">
+                    <img class='inputXuxian' src="../../img/MyPage/setting/shuiX.png" alt="">
+                </div>
+                <div class='Comtent'>
+                    <p class='row1'>地址</p>
+                    <input class="row2" id="address" type="text" name="" placeholder="请输入地址">
+                    <img class='inputXuxian' src="../../img/MyPage/setting/shuiX.png" alt="">
+                </div>
+                <div class='Comtent'>
+                    <p class='default'>设置默认地址</p>
+                    <img id='default' data-default="0" src="../../img/MyPage/address/btn-1.png" alt="">
+                </div>
+            </div>
+            <p id="btn_save"></p>
+        </div>
+    </div>
+</body>
+
+</html>
